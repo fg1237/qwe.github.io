@@ -1,0 +1,643 @@
+@charset "UTF-8";
+@import url(reset.css);
+@import url(common.css);
+
+/* 首页公共样式开始 */
+
+.type-page {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+
+/* 首页公共样式结束 */
+
+h1 {
+    display: none;
+}
+
+body {
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #e3999b);
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, .9);
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
+    z-index: 2;
+}
+
+.header .type-page {
+    height: 57px;
+    line-height: 57px;
+}
+
+.header .type-page>ul li,
+.header .type-page div.left input,
+.header .type-page div.left button {
+    float: left;
+}
+
+:focus {
+    outline: none;
+}
+
+.header .type-page>ul li {
+    margin-right: 40px;
+    border-bottom: 3px solid rgba(255, 255, 255, .85);
+    transition: border-color .3s;
+    cursor: pointer;
+    color: #4d4d4d;
+}
+
+.header .type-page>ul:first-child>li:first-child {
+    border-bottom: 3px solid red;
+}
+
+.header .type-page>ul li:hover {
+    border-bottom: 3px solid red;
+    transition: border-color .1s;
+}
+
+.header .type-page ul.right li:last-child {
+    margin-right: 0px;
+}
+
+.header .type-page div.left {
+    margin-left: 60px;
+    padding-top: 11px;
+}
+
+.header .type-page div.left input {
+    width: 315px;
+    height: 38px;
+    box-sizing: border-box;
+    border: 3px solid #009090;
+    padding-left: 10px;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: width .3s;
+}
+
+.header .type-page div.left input:focus {
+    width: 415px;
+}
+
+.header .type-page div.left button {
+    box-sizing: border-box;
+    height: 38px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    color: rgb(236, 236, 236);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.header .type-page div.left button:nth-child(2) {
+    background: #008c8c;
+}
+
+.header .type-page div.left button:nth-child(3) {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #09a1a1;
+}
+
+.header .type-page div.left button:hover {
+    color: #fff;
+    background: #009494;
+}
+
+.header .type-page div.left button span {
+    font-size: 17px;
+    margin-right: 3px;
+}
+
+.header .type-page ul.right li:first-child {
+    position: relative;
+}
+
+.header .type-page ul.right .QR {
+    position: absolute;
+    line-height: 0;
+    width: 100px;
+    height: 100px;
+    left: -10px;
+    top: 57px;
+    display: none;
+    padding: 10px;
+}
+
+.header .type-page ul.right .QR img {
+    width: 100px
+}
+
+.header .type-page ul.right li:first-child:hover .QR {
+    display: block;
+}
+
+.header .type-page div.left {
+    position: relative;
+}
+
+.header .type-page div.left .search {
+    position: absolute;
+    line-height: 20px;
+    width: 500px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .9);
+    left: 0;
+    top: 70px;
+    height: 0;
+    overflow: hidden;
+    transition: .15s;
+}
+
+.header .type-page div.left .search li {
+    float: left;
+    width: 116px;
+    background: rgba(240, 240, 240, .6);
+    padding: 0 15px;
+    margin: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header .type-page div.left .search li:hover {
+    background: rgba(240, 240, 240, .6);
+    background: #fff;
+    background: rgba(255, 255, 255, 0);
+}
+
+.header .type-page div.left .search li:nth-child(1),
+.header .type-page div.left .search li:nth-child(2),
+.header .type-page div.left .search li:nth-child(3) {
+    margin-bottom: 0;
+}
+
+.header .type-page div.left .search li:nth-child(2),
+.header .type-page div.left .search li:nth-child(5) {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.header .type-page div.left .search li h3,
+.header .type-page div.left .search li p {
+    height: 20px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header .type-page div.left .search li h3 {
+    color: #333;
+    font-size: 12px;
+}
+
+.header .type-page div.left .search li h3>span {
+    font-size: 10px;
+    margin-right: 5px;
+    background: rgba(191, 85, 58, .8);
+    border-radius: 10px;
+    color: rgba(253, 219, 6, .8);
+    padding: 3px;
+}
+
+.header .type-page div.left .search li h3>span span {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.header .type-page div.left .search li p {
+    font-size: 14px;
+    color: #999;
+}
+
+.header .type-page div.left input:focus~.search {
+    height: 125px;
+    transition: .3s;
+}
+
+
+/* 三选一部分开始 */
+
+.choose {
+    padding-top: 100px;
+    background: rgba(173, 216, 230, .5);
+    background: linear-gradient(to right, rgba(31, 162, 255, .3), rgba(18, 216, 250, .3), rgba(166, 255, 203, .3));
+    background: linear-gradient(to right, #ede574, #e1f5c4);
+    background: rgba(255, 255, 255, .4);
+    box-shadow: 3px 3px 6px 3px rgb(0 0 0 / 30%);
+    background-clip: content-box;
+    z-index: 1;
+    position: relative;
+}
+
+.nav {
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+}
+
+.choose>.nav>a {
+    float: left;
+    width: 200px;
+    text-align: center;
+    color: #666;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.choose>.nav>a:hover {
+    color: #333;
+}
+
+.choose>.nav>a:first-child {
+    color: #333;
+}
+
+.choose>.nav>.corner,
+.choose>.nav>.corner1,
+.choose>.nav>.corner2 {
+    position: absolute;
+    border: 8px solid rgba(255, 255, 255, 0);
+    border-bottom: 8px solid rgba(0, 143, 214, .5);
+}
+
+.choose>.nav>.corner {
+    bottom: 0;
+    left: 92px;
+}
+
+.choose>.nav>.corner1 {
+    left: 292px;
+    bottom: -8px;
+    transition: .5s;
+}
+
+.choose>.nav>.corner2 {
+    left: 492px;
+    bottom: -8px;
+    transition: .5s;
+}
+
+.choose>.nav>a:nth-child(2):hover~.corner1 {
+    left: 292px;
+    bottom: 0px;
+    transition: .5s;
+}
+
+.choose>.nav>a:nth-child(3):hover~.corner2 {
+    left: 492px;
+    bottom: 0px;
+    transition: .5s;
+}
+
+
+/* 三选一部分结束 */
+
+
+/* 筛选部分开始 */
+
+.forms {
+    padding-top: 1px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.filtrate {
+    background: rgba(255, 255, 255, .4);
+    padding: 0 15px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px 3px rgb(0 0 0 / 30%);
+}
+
+.result-reset {
+    height: 100px;
+    line-height: 100px;
+    font-size: 18px;
+    color: #333;
+}
+
+.result-reset .result {
+    cursor: context-menu;
+}
+
+.result-reset .result span {
+    color: #f34d41;
+}
+
+.result-reset .reset {
+    font-size: 12px;
+    padding: 3px 3px;
+    background: rgba(255, 255, 255, .4);
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.result-reset .reset:hover {
+    background: rgba(255, 255, 255, .5);
+    color: #000;
+}
+
+.filtrate .condition {
+    color: #333;
+}
+
+.filtrate .condition dl:first-child {
+    height: 40px;
+    line-height: 40px;
+}
+
+.filtrate .condition dl:first-child dd {
+    padding: 0 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .6);
+}
+
+.filtrate .condition dl dd:first-of-type {
+    background: rgba(255, 255, 255, .4);
+    box-shadow: 3px 3px 6px 3px rgb(0 0 0 / 30%);
+    color: #000;
+    font-weight: bold;
+}
+
+.filtrate .condition dl dd:hover {
+    box-shadow: 3px 3px 6px 3px rgb(0 0 0 / 30%);
+    color: #000;
+    font-weight: bold;
+}
+
+.filtrate .condition dl:first-child dd:nth-of-type(2) {
+    margin: 0 30px;
+}
+
+.filtrate .condition dl.ty {
+    padding: 15px 0;
+}
+
+.filtrate .condition dl.ty dt,
+.filtrate .condition dl.ty dd {
+    height: 30px;
+    line-height: 30px;
+}
+
+.condition dl.ty dd {
+    padding: 0 8px;
+    background: rgba(255, 255, 255, .6);
+    margin-right: 30px;
+    border-radius: 4px;
+}
+
+.condition dl:last-child dd:nth-child(5) {
+    box-shadow: 3px 3px 6px 3px rgb(0 0 0 / 30%);
+}
+
+.filtrate .condition dl dt {
+    margin-right: 25px;
+    margin-right: 50px;
+    font-size: 20px;
+    background: rgba(226, 226, 226, .1);
+    box-shadow: 2px 2px 0px 0px rgb(0 0 0 / 30%);
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.filtrate .condition dl dd {
+    cursor: pointer;
+}
+
+
+/* 筛选部分结束 */
+
+
+/* 书本列表开始 */
+
+.book .list li {
+    float: left;
+    width: 390px;
+    height: 140px;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, .6);
+    box-shadow: 3px 3px 6px 3px rgb(0 0 0 / 30%);
+}
+
+.book .list li:hover {
+    background: rgba(255, 255, 255, .4);
+}
+
+.book .list li img {
+    height: 120px;
+    margin-right: 10px;
+}
+
+.book .list li .about {
+    width: 270px;
+}
+
+.book .list li .about>* {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 30px;
+    line-height: 30px;
+}
+
+.book .list li .about p {
+    font-size: 15px;
+    color: #333;
+}
+
+.book .list li .about>span {
+    font-size: 14px;
+    color: #999;
+}
+
+.book .list li .about div span:first-child {
+    font-size: 14px;
+}
+
+.book .list li .about div span:last-child {
+    color: #ff6b00;
+    font-size: 15px;
+}
+
+.book .list li:nth-child(3n-4) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.book .list li {
+    position: relative;
+}
+
+.book .list li i {
+    position: absolute;
+    width: 20px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    bottom: 13px;
+    right: 23px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    transition: .2s;
+}
+
+.book .list li:hover i {
+    opacity: 1;
+}
+
+.book .list li .warn {
+    position: absolute;
+    background: rgba(255, 255, 255, .5);
+    font-size: 12px;
+    width: 48px;
+    padding: 3px;
+    border-radius: 2px;
+    bottom: 40px;
+    right: 10px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.book .list li i:hover+.warn {
+    opacity: 1;
+}
+
+
+/* 书本列表结束 */
+
+
+/* 页尾开始 */
+
+.footer {
+    background: rgba(255, 255, 255, .4);
+    margin-top: 50px;
+    color: #666;
+}
+
+.footer .tail {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.tail .basic {
+    margin-right: 150px;
+}
+
+.tail .basic>div:nth-child(2)>span:last-child {
+    cursor: help;
+}
+
+.tail .basic>div {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.tail .basic>div span,
+.tail .basic>div.inform {
+    cursor: pointer;
+}
+
+.tail .cut p {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 100px;
+    cursor: pointer;
+    border: 1px solid;
+    background: rgba(255, 255, 255, .6);
+}
+
+.tail .cut {
+    position: relative;
+}
+
+.tail .cut .langue {
+    position: absolute;
+    background: red;
+    padding: 0 10px;
+    height: 125px;
+    overflow-y: scroll;
+    left: 105px;
+    top: 10px;
+    border-radius: 5px;
+    color: #333;
+    background: rgba(255, 255, 255, .5);
+}
+
+.tail .cut .langue li {
+    height: 20px;
+    line-height: 20px;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .6);
+    width: 156px;
+    cursor: pointer;
+}
+
+.tail .cut .langue li:hover {
+    background: rgba(255, 255, 255, 1);
+    background: rgba(224, 224, 230, .3);
+    color: black;
+}
+
+.tail .join>* {
+    height: 40px;
+    line-height: 40px;
+    cursor: context-menu;
+}
+
+.tail .join dt {
+    height: 30px;
+    line-height: 30px;
+}
+
+
+/* 页尾结束 */
+
+
+/* 返回顶部开始 */
+
+.anchor {
+    position: fixed;
+    bottom: 5%;
+    right: 1%;
+}
+
+.anchor a {
+    display: inline-block;
+    background: rgba(255, 255, 255, .5);
+    padding: 10px 5px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #333;
+}
+
+.anchor a:hover {
+    box-shadow: 3px 3px 6px 3px rgb(0 0 0 / 30%);
+}
+
+
+/* 返回顶部结束 */
