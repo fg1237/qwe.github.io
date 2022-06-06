@@ -17,8 +17,7 @@ h1 {
 }
 
 body {
-    /* background: linear-gradient(to right, #c6ffdd, #fbd786, #e3999b); */
-    background: lightblue;
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #e3999b);
 }
 
 .header {
