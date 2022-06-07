@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        time {
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>你好，欢迎访问XXXX!</h2>
+    <time></time>
+    <script>
+        var zhou = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'];
+        var shi = document.getElementsByTagName('time')[0];
+
+        function shijian() {
+            var time = new Date();
+            var year = time.getFullYear() + '年';
+            var month = time.getMonth() + 1 + '月';
+            var date = time.getDate() + '日';
+            var hours = time.getHours();
+            var minute = time.getMinutes();
+            var second = time.getSeconds();
+            var week = time.getDay();
+            var m;
+            if (hours < 12 || (hours == 0 && minute > 0)) {
+                m = 'AM'
+            } else if (hours > 12 || (hours == 12 && minute > 0)) {
+                m = 'PM'
+            } else if (hours == 12 && minute == 0) {
+                hours = 24;
+                m = noon;
+            } else if (hours == 0 && minute == 0) {
+                hours = 12;
+                m = midnight;
+            }
+            hours -= 12;
+            var da = year + month + date + '   ' + hours + ':' + minute + ':' + second + '   ' + m + '   ' + zhou[week];
+            shi.innerHTML = da;
+        }
+        setInterval(shijian, 1000);
+    </script>
+</body>
+
+</html>
