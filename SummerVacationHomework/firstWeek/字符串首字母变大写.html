@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = 'border-left-color';
+
+        function upperCase(s) {
+            var str1 = '';
+            var arr = s.split('-');
+            for (var i = 1; i < arr.length; i++) {
+                arr[i] = arr[i].replace(arr[i].charAt(0), arr[i].charAt(0).toUpperCase());
+            }
+            for (var i = 0; i < arr.length; i++) {
+                str1 += arr[i]
+            }
+            console.log(str1);
+        }
+        upperCase(str);
+    </script>
+</body>
+
+</html>
