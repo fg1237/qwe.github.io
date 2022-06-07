@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li id="firstLi">请通过id找到我，并且给我加个红色的背景</li>
+        <li>通过标签名找到我，并且改变我的内容为“你好，课工场”</li>
+    </ul>
+    <script>
+        var liid = document.getElementById('firstLi');
+        var litagname = document.getElementsByTagName('li')[1];
+
+        function change() {
+            liid.style.backgroundColor = 'red';
+            litagname.innerHTML = '你好，课工场';
+        }
+        setTimeout(change, 3000);
+    </script>
+</body>
+
+</html>
