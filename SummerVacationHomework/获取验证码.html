@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            border: 1px solid #ccc;
+        }
+        
+        .style {
+            background-color: #ccc;
+            color: #666;
+            cursor: wait;
+        }
+    </style>
+</head>
+
+<body>
+    <button>发送</button><span style="display: none;"><span>5</span>秒之后可重新获取验证码</span><span style="display: none;">重新获取验证码</span>
+    <script>
+        var button = document.getElementsByTagName('button')[0];
+        var span = document.getElementsByTagName('span')[0];
+        var span1 = document.getElementsByTagName('span')[1];
+        var span2 = document.getElementsByTagName('span')[2];
+        var i = 4;
+        var stop;
+        var bol = true;
+        button.onclick = function() {
+            if ((i == 4 || i == 3) && bol) {
+                bol = false;
+                button.className = 'style';
+                span2.style.display = 'none';
+                span1.innerHTML = 5;
+                span.style.display = 'inline';
+                stop = setInterval(time, 1000);
+            }
+        }
+
+        function time() {
+            span1.innerHTML = i;
+            if (i == 1) {
+                setTimeout(function() {
+                    span.style.display = 'none';
+                    span2.style.display = 'inline';
+                }, 1000);
+
+            }
+            if (i == 0) {
+                button.className = '';
+                i = 4;
+                bol = true
+                clearInterval(stop);
+            }
+            i--;
+        }
+    </script>
+</body>
+
+</html>
