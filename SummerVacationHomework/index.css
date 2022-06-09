@@ -1,0 +1,79 @@
+/* 样式重置 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* 字体大小百分比设置，相对于父元素字体大小，如果没有父元素那么相对于浏览器默认字号 */
+    font-size: 100%;
+    /* 去除字体加粗 */
+    font-weight: normal;
+}
+
+
+/* 样式重置结束 */
+
+body {
+    font: 16px serif, sans-serif;
+    color: #173e43;
+    background: #dddfd4;
+}
+
+.header {
+    width: 80%;
+    height: 80px;
+    background: #fae596;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.header nav a {
+    float: left;
+    box-sizing: border-box;
+    width: 25%;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
+    transition: border-bottom-color .8s;
+}
+
+.header nav a:hover {
+    border-bottom-color: #173e43;
+}
+
+.main {
+    height: 500px;
+    background: #3fb0ac;
+    padding: 30px 20px;
+}
+
+.main>a {
+    float: left;
+    box-sizing: border-box;
+    width: 25%;
+    height: 60px;
+    border: 2px solid black;
+    line-height: 56px;
+    text-align: center;
+    background: lightblue;
+    margin-bottom: 20px;
+}
