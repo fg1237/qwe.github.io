@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加文本框</title>
+</head>
+
+<body>
+    <button type="button">新增</button>
+    <ul>
+        <li><input type="text" placeholder="请输入内容"></li>
+    </ul>
+    <script>
+        var button = document.getElementsByTagName('button')[0];
+        var ul = document.getElementsByTagName('ul')[0];
+        button.onclick = function() {
+            var li = document.createElement('li');
+            var input = document.createElement('input');
+            input.setAttribute('type', 'text');
+            input.setAttribute('placeholder', '请输入内容')
+            li.appendChild(input);
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+
+</html>
