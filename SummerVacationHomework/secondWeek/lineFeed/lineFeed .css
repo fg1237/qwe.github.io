@@ -1,0 +1,36 @@
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  
+  .main {
+      width: 250px;
+      height: 18px;
+      border: 2px solid lightblue;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      overflow: hidden;
+  }
+  
+  .p {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      transition: .5s;
+  }
+  
+  .liji {
+      transition: 0s;
+  }
+  
+  p {
+      height: 18px;
+      line-height: 18px;
+      text-align: center;
+      font-weight: bold;
+  }
