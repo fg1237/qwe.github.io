@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab切换</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            height: 900px;
+            background-image: linear-gradient(to bottom right, #9fa5d5, #e8f5c8);
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        .box {
+            position: absolute;
+            width: 160px;
+            height: 350px;
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: rgba(255, 255, 255, .4);
+            box-shadow: 3px 3px 6px 3px rgb(0 0 0 / 30%);
+        }
+        
+        body {
+            font-size: 16px;
+        }
+        
+        h2 {
+            font-size: 100%;
+            color: orange;
+            margin-bottom: 3px;
+        }
+        
+        h2>span,
+        .box>p {
+            color: rgb(184, 136, 47);
+            font-size: 80%;
+        }
+        
+        h2>span {
+            margin-left: 15px;
+        }
+        
+        .box>p {
+            margin-bottom: 5px;
+        }
+        
+        .box .clearfix {
+            margin-bottom: 15px;
+        }
+        
+        .box .clearfix li {
+            float: left;
+            background: #999;
+            color: #fff;
+            font-size: 14px;
+            padding: 3px 9px;
+            margin-right: 2px;
+            border-radius: 3px;
+        }
+        
+        body .box .back {
+            background-image: linear-gradient(to bottom, blue, lightblue);
+            cursor: pointer;
+        }
+        
+        .book1,
+        .book2 {
+            display: none;
+        }
+        
+        .book li,
+        .book1 li,
+        .book2 li {
+            color: #008c8c;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>图书排行榜<span>TOP100</span></h2>
+        <p>最近7天销量,每日更新</p>
+        <ul class="clearfix">
+            <li class="back">小说</li>
+            <li>非小说</li>
+            <li>少儿</li>
+        </ul>
+        <ul class="book name">
+            <li>1.时间旅行者的妻子</li>
+            <li>2.女心理师（下）</li>
+            <li>3.鬼吹灯之精绝古城</li>
+            <li>4.女心理师（上）</li>
+            <li>5.小时候</li>
+            <li>6.追风筝的人</li>
+            <li>7.盗墓笔记2</li>
+            <li>8.输赢</li>
+        </ul>
+        <ul class="book1 name">
+            <li>1.人生若只如初见</li>
+            <li>2.高效能人士的七个..</li>
+            <li>3.求医不如求己</li>
+            <li>4.人体使用手册</li>
+            <li>5.孩子，把你的手给我</li>
+            <li>6.别笑！我是英文单词书</li>
+            <li>7.人体经络使用手册</li>
+            <li>8.股市稳赚</li>
+        </ul>
+        <ul class="book2 name">
+            <li>1.小怪物</li>
+            <li>2.一见你就心情好</li>
+            <li>3.猫和魔鬼</li>
+            <li>4.兰亭序（绘本版）</li>
+            <li>5.想做家务的农夫</li>
+            <li>6.逃家小兔</li>
+            <li>7.100万只猫</li>
+            <li>8.第一天上学，我好紧张</li>
+        </ul>
+    </div>
+    <script>
+        var lis = document.getElementsByClassName('clearfix')[0].children;
+        var ul = document.getElementsByClassName('name');
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function() {
+                for (var j = 0; j < lis.length; j++) {
+                    if (lis[j] == this) {
+                        this.className = 'back';
+                        ul[j].style.display = 'block';
+                    } else {
+                        lis[j].className = '';
+                        ul[j].style.display = 'none';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
