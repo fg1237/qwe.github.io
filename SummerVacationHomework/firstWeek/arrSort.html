@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [9, 23, 16, 7, 65, 4, 5, 45];
+        var intermediateVariable;
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < arr.length - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    intermediateVariable = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = intermediateVariable;
+                }
+            }
+        }
+        console.log(arr);
+        var arr1 = [9, 23, 16, 7, 65, 4, 5, 45];
+        arr1.sort(function(a, b) {
+            return a - b;
+        });
+        console.log(arr1);
+    </script>
+</body>
+
+</html>
