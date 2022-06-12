@@ -12,8 +12,8 @@ function dong() {
     } else {
         dtop = parseInt(div.style.top);
     }
-    dtop -= 18;
-    if (dtop == -360) {
+    dtop -= 40;
+    if (dtop == -800) {
         dtop = 0;
         div.className = 'p liji';
     }
