@@ -57,12 +57,17 @@ body {
     transition: border-bottom-color .8s;
 }
 
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .header nav a:hover {
     border-bottom-color: #173e43;
 }
 
 .main {
-    height: 500px;
     background: #3fb0ac;
     padding: 30px 20px;
 }
@@ -75,6 +80,40 @@ body {
     border: 2px solid black;
     line-height: 56px;
     text-align: center;
-    background: lightblue;
     margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.jianjie {
+    text-align: center;
+    background: #c5d5cb;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.kuai1,
+.kuai2 {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    vertical-align: text-bottom;
+}
+
+.kuai1 {
+    background: lightblue;
+    margin-right: 100px;
+}
+
+.kuai2 {
+    background: #cdd422;
+}
+
+.firstWeek {
+    background: lightblue;
+}
+
+.secondWeek {
+    background: #cdd422;
 }
