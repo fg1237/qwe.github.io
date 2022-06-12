@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>返回顶部</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        div {
+            position: fixed;
+            right: 2%;
+            bottom: 5%;
+            width: 40px;
+            line-height: 25px;
+            text-align: center;
+            background-color: red;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="shade/img/bj.png" alt="大概率图片文件存方位置发生变动，请修改路径或者文件位置">
+    <div>返回顶部</div>
+    <script>
+        var div = document.getElementsByTagName('div')[0];
+        var nowtop,
+            viewArea,
+            stop;
+
+        function area() {
+            viewArea = window.innerHeight;
+        }
+        area();
+
+        function move() {
+            window.scrollBy(0, -7);
+            if (nowtop == 0) {
+                clearInterval(stop);
+            }
+        }
+        window.onresize = area;
+        window.onscroll = function() {
+            nowtop = document.documentElement.scrollTop;
+            if (nowtop >= viewArea) {
+                div.style.display = 'block';
+            } else {
+                div.style.display = 'none';
+            }
+        }
+        div.onclick = function() {
+            stop = setInterval(move, 1);
+        }
+    </script>
+</body>
+
+</html>
