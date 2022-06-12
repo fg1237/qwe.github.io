@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求差</title>
+</head>
+
+<body>
+    <script>
+        var bol = false;
+        var bol1 = false;
+
+        function judge() {
+            if (!(num % 1 == 0)) {
+                num = prompt('请重新输入第一个整数');
+                judge();
+            } else {
+                bol = true;
+            }
+        }
+
+        function judge1() {
+            if (!(num1 % 1 == 0)) {
+                num1 = prompt('请重新输入第二个整数');
+                judge1();
+            } else {
+                bol1 = true;
+            }
+        }
+
+        function differenceValue() {
+            alert(num - num1);
+        }
+        var num = prompt('请输入第一个整数');
+        judge();
+        var num1 = prompt('请输入第二个整数');
+        judge1();
+        if (bol && bol1) {
+            differenceValue();
+        }
+    </script>
+
+</body>
+
+</html>
