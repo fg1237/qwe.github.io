@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动生成li</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        li {
+            float: left;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+        }
+        
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button">自动生成10个li</button>
+    <ul></ul>
+    <script>
+        var button = document.getElementsByTagName('button')[0];
+        var ul = document.getElementsByTagName('ul')[0];
+        var arrcolor = ['#008c8c', '#b16200', '#7d738b', '#0093b9', '#0093b9', '#e6009a', '#e80e28', '#cc4465', '#aa6440', '#688000']
+
+        button.onclick = function() {
+            arrcolor.sort(function(a, b) {
+                return Math.random() - 0.5;
+            })
+            for (var i = 0; i < 10; i++) {
+                var li = document.createElement('li');
+                li.innerText = i;
+                li.style.backgroundColor = arrcolor[i];
+                ul.appendChild(li);
+            }
+        }
+    </script>
+</body>
+
+</html>
