@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘事件</title>
+    <style>
+        i {
+            font-style: normal;
+        }
+        
+        span {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <span>还可以输入<i></i>个字符</span>
+    <script>
+        var text = document.getElementsByTagName('textarea')[0];
+        var span = document.getElementsByTagName('span')[0];
+        var i = document.getElementsByTagName('i')[0];
+        var bol = true;
+
+        function check() {
+            if (bol) {
+                span.style.display = 'inline';
+                bol = false;
+            }
+            len = 40 - text.value.length;
+            if (len == 0) {
+                text.readOnly = true;
+            }
+            i.innerText = len;
+        }
+        text.onkeyup = check;
+        text.onkeypress = check;
+        text.onclick = function() {
+            text.readOnly = false;
+        }
+    </script>
+</body>
+
+</html>
