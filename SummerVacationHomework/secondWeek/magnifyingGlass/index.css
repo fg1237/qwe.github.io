@@ -1,0 +1,35 @@
+.small {
+    width: 300px;
+    height: 225px;
+    border: 1px solid #ccc;
+    float: left;
+    background: url(img/smallpic.jpg) no-repeat;
+    position: relative;
+}
+
+.big {
+    width: 600px;
+    height: 250px;
+    border: 1px solid #ccc;
+    float: left;
+    margin-left: 10px;
+    background: url(img/bigpic.jpg) no-repeat;
+}
+
+
+/* 
+计算可移动div的大小
+可移动div的尺寸 / 小图尺寸 = 
+推导：
+可移动div的尺寸 = （大的div的尺寸 / 大图尺寸）* 小图尺寸
+*/
+
+.small .move {
+    position: absolute;
+    width: 108px;
+    height: 81px;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 0, .4);
+    cursor: move;
+}
