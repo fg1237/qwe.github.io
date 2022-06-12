@@ -55,6 +55,7 @@ body {
     font-size: 20px;
     border-bottom: 3px solid rgba(0, 0, 0, 0);
     transition: border-bottom-color .8s;
+    cursor: pointer;
 }
 
 .clearfix::after {
@@ -64,6 +65,10 @@ body {
 }
 
 .header nav a:hover {
+    border-bottom-color: #173e43;
+}
+
+.header .border {
     border-bottom-color: #173e43;
 }
 
@@ -119,4 +124,29 @@ body {
 
 .secondWeek {
     background: #cdd422;
+}
+
+.hsw {
+    display: none;
+}
+
+.nws {
+    display: none;
+}
+
+.cbn {
+    display: none;
+}
+
+.zpb {
+    display: none;
+}
+
+.lyh {
+    display: none;
+}
+
+.zy {
+    font-size: 30px;
+    font-weight: bold;
 }
